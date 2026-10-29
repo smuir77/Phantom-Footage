@@ -1,0 +1,1 @@
+{"description":"Phantom Footage — strange, creepy, and paranormal videos caught on camera, with shared videos and votes.","engines":{"node":">=18"},"license":"MIT","main":"server.js","name":"phantom-footage","scripts":{"start":"node server.js"},"version":"1.0.0"}
