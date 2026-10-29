@@ -25,33 +25,14 @@ const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data.json');
 const PUBLIC_DIR = __dirname;
 
-const seedVideos = [
-  {
-    id: 'seed-1',
-    title: 'Ghost Caught in Hospital',
-    url: '',
-    createdAt: '2025-06-08T00:00:00.000Z',
-    submitted: false,
-    placeholder: true,
-    votesByVisitor: {},
-  },
-  {
-    id: 'seed-2',
-    title: 'Unexplained Figure in Woods',
-    url: '',
-    createdAt: '2025-06-09T00:00:00.000Z',
-    submitted: false,
-    placeholder: true,
-    votesByVisitor: {},
-  },
-];
+const seedVideos = [];
 
 function loadData() {
   try {
     const parsed = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
     if (Array.isArray(parsed.videos)) return parsed;
-  } catch (e) { /* missing or unreadable: start from the seed list */ }
-  return { videos: seedVideos.map((v) => ({ ...v, votesByVisitor: { ...v.votesByVisitor } })) };
+  } catch (e) { /* missing or unreadable: start empty */ }
+  return { videos: [] };
 }
 
 function saveData(data) {

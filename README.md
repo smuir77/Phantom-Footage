@@ -3,8 +3,8 @@
 Strange, creepy, and paranormal videos caught on camera.
 
 A video grid with search, sorting by votes, up/down voting, and a submit
-form for YouTube videos. The two starting entries are examples — submit a
-real YouTube link to replace them with playable videos.
+form for YouTube videos. The site starts empty — submit a real YouTube
+link to add the first video.
 
 ## How it works
 

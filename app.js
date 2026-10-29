@@ -10,10 +10,7 @@
   var STORAGE_VOTES = 'phantom-footage:votes';
   var STORAGE_VISITOR = 'phantom-footage:visitor';
 
-  var seedVideos = [
-    { id: 'seed-1', title: 'Ghost Caught in Hospital', url: '', votes: 0, createdAt: '2025-06-08T00:00:00.000Z', submitted: false, placeholder: true },
-    { id: 'seed-2', title: 'Unexplained Figure in Woods', url: '', votes: 0, createdAt: '2025-06-09T00:00:00.000Z', submitted: false, placeholder: true }
-  ];
+  var seedVideos = [];
 
   var state = {
     videos: [],
