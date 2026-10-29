@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Phantom Footage showcases strange, creepy, and paranormal videos caught on camera." />
+  <title>Phantom Footage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Phantom Footage</h1>
+    <p>Strange and creepy videos caught on camera</p>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Find and sort videos">
+      <label class="search-label">
+        <span class="visually-hidden">Search videos</span>
+        <input type="search" id="searchInput" placeholder="Search videos…" autocomplete="off" />
+      </label>
+      <label class="sort-label">
+        Sort by
+        <select id="sortSelect">
+          <option value="votes">Most voted</option>
+          <option value="newest">Newest first</option>
+          <option value="title">Title A–Z</option>
+        </select>
+      </label>
+      <p class="saved-note" id="savedNote" role="status"></p>
+    </section>
+
+    <section aria-label="Videos">
+      <div class="video-grid" id="videoGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No videos match your search yet. Try a different search, or submit one below.</p>
+    </section>
+
+    <section class="submit-section" aria-label="Submit a video">
+      <h2>Submit Your Video</h2>
+      <p>Videos and votes are saved in this browser, so they stay here when you reload this page. They are not shared with other visitors.</p>
+      <form id="submitForm">
+        <label>
+          <span class="visually-hidden">Video title</span>
+          <input type="text" id="videoTitle" placeholder="Video title" maxlength="120" required />
+        </label>
+        <label>
+          <span class="visually-hidden">YouTube link</span>
+          <input type="url" id="videoUrl" placeholder="YouTube link (watch, short, or embed link)" required />
+        </label>
+        <button type="submit">Submit</button>
+        <p class="form-error" id="formError" role="alert" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Phantom Footage. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
